@@ -1,6 +1,8 @@
-openai
 flask
+openai
+python-dotenv
 pandas
 requests
 beautifulsoup4
 schedule
+gunicorn
