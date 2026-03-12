@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Travel Assistant</title>
+</head>
+
+<body>
+
+<h2>AI Travel Chatbot</h2>
+
+<input id="msg" placeholder="Ask travel question"/>
+<button onclick="send()">Send</button>
+
+<p id="reply"></p>
+
+<script>
+
+async function send(){
+
+let message=document.getElementById("msg").value;
+
+let res=await fetch("/api/chat",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({message:message})
+})
+
+let data=await res.json()
+
+document.getElementById("reply").innerText=data.reply
+
+}
+
+</script>
+
+</body>
+</html>
