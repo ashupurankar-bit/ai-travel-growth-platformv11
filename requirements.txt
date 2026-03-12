@@ -1,0 +1,6 @@
+openai
+flask
+pandas
+requests
+beautifulsoup4
+schedule
